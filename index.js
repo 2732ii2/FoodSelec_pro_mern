@@ -22,7 +22,8 @@ app.use(bodyparser.urlencoded({ extended: true, limit: "10mb" }));
 app.use("/",route);
 db_conn();
 
+const Port = process.env.Port || "8000";
 
-app.listen(8000,()=>{
-    console.log("connected");
-})
+app.listen(Port, () => {
+  console.log("connected");
+});
